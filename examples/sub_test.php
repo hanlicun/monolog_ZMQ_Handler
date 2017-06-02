@@ -5,10 +5,10 @@
 */
 
 //  Prepare our context and subscriber
-$context = new ZMQContext();
-$subscriber = new ZMQSocket($context, ZMQ::SOCKET_SUB);
+$context = new \ZMQContext();
+$subscriber = new \ZMQSocket($context, \ZMQ::SOCKET_SUB);
 $subscriber->connect("tcp://127.0.0.1:7777");
-$subscriber->setSockOpt(ZMQ::SOCKOPT_SUBSCRIBE, "logger");
+$subscriber->setSockOpt(\ZMQ::SOCKOPT_SUBSCRIBE, "logger");
 
 while (true) {
     //  Read envelope with address
