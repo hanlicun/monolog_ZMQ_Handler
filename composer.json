@@ -13,7 +13,10 @@
     },
     "autoload": {
         "psr-4": {
-            "Ok\\Handler\\ZMQHandler\\": "src/Ok/Handler/ZMQHandler"
+            "Ok\\Handler\\ZMQHandler\\": "src/Ok/Handler/ZMQHandler",
+	    "Ok\\Log\\Writer\\": "src/Ok/Log/Writer",
+	    "Ok\\Log\\Logger\\": "src/Ok/Log/Logger",
+	    "Ok\\Socket\\ZMQSocket\\": "src/Ok/Socket/ZMQSocket"
         }
     }
 }
