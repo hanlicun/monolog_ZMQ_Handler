@@ -29,7 +29,6 @@
 	如何使用：
 
 	public function test(){
-
 		$msg = json_encode([
 			"data"=>random_int(10000,90000),
 			"aa"=>"bbb",
