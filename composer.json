@@ -7,5 +7,7 @@
             "email": "282552154@qq.com"
         }
     ],
-    "require": {}
+    "require": {
+	"php": ">=7.0.0"
+    }
 }
