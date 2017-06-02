@@ -2,7 +2,7 @@
 	laravel monolog ZMQ Handler
 
 	在laravel框架中添加config/ok.php
-	```Php
+	```Java
 	<?php
 	/**
 	 * @function  ok.php
