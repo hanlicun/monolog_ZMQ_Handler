@@ -1,32 +1,34 @@
-# monolog_ZMQ_Handler
-laravel monolog ZMQ Handler
+	# monolog_ZMQ_Handler
+	laravel monolog ZMQ Handler
 
-ÔÚlaravel¿ò¼ÜÖĞÌí¼Óconfig/ok.php
-<?php
-/**
- * @function  ok.php
- * @Author: hanlc <hanlc@okooo.net>
- * @Date: 2017/5/26 16:52
- */
-return [
-	"zmq" => [
-		"env"        => env("LOG_ENV","file"), //¿ÉÑ¡Ïî zmq »ò file
-		"connection" => env("ZMQ_CONNECTION", "tcp://127.0.0.1:7777"),
-		"format" => env("ZMQ_FORMAT", "json"),  //json php string
-		"isBackground" => env("ZMQ_IS_BACKGROUND", false),
-		"timeout"	   => env("ZMQ_TIMEOUT", 100000),
-		"method"	  =>"bind", //$connect  bind
-		"channel"	  =>"okooo.logger"
-	]
-];
+	åœ¨laravelæ¡†æ¶ä¸­æ·»åŠ config/ok.php
+	<?php
+	/**
+	 * @function  ok.php
+	 * @Author: hanlc <hanlc@okooo.net>
+	 * @Date: 2017/5/26 16:52
+	 */
+	return [
+		"zmq" => [
+			"env"        => env("LOG_ENV","file"), //å¯é€‰é¡¹ zmq æˆ– file
+			"connection" => env("ZMQ_CONNECTION", "tcp://127.0.0.1:7777"),
+			"format" => env("ZMQ_FORMAT", "json"),  //json php string
+			"isBackground" => env("ZMQ_IS_BACKGROUND", false),
+			"timeout"	   => env("ZMQ_TIMEOUT", 100000),
+			"method"	  =>"bind", //$connect  bind
+			"channel"	  =>"okooo.logger"
+		]
+	];
+	
+	?>
 
-Ìí¼Ó app/Facades/Oklog.php
-Ìí¼Ó app/Providers/LogServiceProvider.php
 
-ÈçºÎÊ¹ÓÃ£º
+	æ·»åŠ  app/Facades/Oklog.php
+	æ·»åŠ  app/Providers/LogServiceProvider.php
+
+	å¦‚ä½•ä½¿ç”¨ï¼š
 
 	public function test(){
-
 		$msg = json_encode([
 			"data"=>random_int(10000,90000),
 			"aa"=>"bbb",
@@ -34,7 +36,7 @@ return [
 		);
 		//app("oklog")->setLogger("logger")->info($msg);
 		Oklog::setLogger("okooo.logger.test.test")->debug($msg);
-		//¿ÉÄÜµÄ·½·¨ info  debug  notice warning error alert
+		//å¯èƒ½çš„æ–¹æ³• info  debug  notice warning error alert
 		//Oklog::info($msg);
 		return $msg;
 	}
