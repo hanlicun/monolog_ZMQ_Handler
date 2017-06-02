@@ -1,6 +1,7 @@
 {
     "name": "hanlc/monologzmqhandler",
     "description": "Monolog Zeromq Handler",
+    "license":"MIT",
     "authors": [
         {
             "name": "hanlc",
@@ -9,5 +10,10 @@
     ],
     "require": {
 	"php": ">=7.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ford\\Escape\\": "src/Ford/Escape"
+        }
     }
 }
