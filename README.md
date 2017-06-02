@@ -2,6 +2,7 @@
 	laravel monolog ZMQ Handler
 
 	在laravel框架中添加config/ok.php
+	```Php
 	<?php
 	/**
 	 * @function  ok.php
@@ -19,7 +20,7 @@
 			"channel"	  =>"okooo.logger"
 		]
 	];
-
+	```
 
 	添加 app/Facades/Oklog.php
 	添加 app/Providers/LogServiceProvider.php
