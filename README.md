@@ -1,7 +1,7 @@
 # monolog_ZMQ_Handler
 laravel monolog ZMQ Handler
 
-ÔÚlaravel¿ò¼ÜÖĞÌí¼Óconfig/ok.php
+åœ¨laravelæ¡†æ¶ä¸­æ·»åŠ config/ok.php
 <?php
 /**
  * @function  ok.php
@@ -10,7 +10,7 @@ laravel monolog ZMQ Handler
  */
 return [
 	"zmq" => [
-		"env"        => env("LOG_ENV","file"), //¿ÉÑ¡Ïî zmq »ò file
+		"env"        => env("LOG_ENV","file"), //å¯é€‰é¡¹ zmq æˆ– file
 		"connection" => env("ZMQ_CONNECTION", "tcp://127.0.0.1:7777"),
 		"format" => env("ZMQ_FORMAT", "json"),  //json php string
 		"isBackground" => env("ZMQ_IS_BACKGROUND", false),
@@ -20,21 +20,3 @@ return [
 	]
 ];
 
-Ìí¼Ó app/Facades/Oklog.php
-Ìí¼Ó app/Providers/LogServiceProvider.php
-
-ÈçºÎÊ¹ÓÃ£º
-
-	public function test(){
-
-		$msg = json_encode([
-			"data"=>random_int(10000,90000),
-			"aa"=>"bbb",
-			"time"=>date("Y-m-d H:i:s U")]
-		);
-		//app("oklog")->setLogger("logger")->info($msg);
-		Oklog::setLogger("okooo.logger.test.test")->debug($msg);
-		//¿ÉÄÜµÄ·½·¨ info  debug  notice warning error alert
-		//Oklog::info($msg);
-		return $msg;
-	}
