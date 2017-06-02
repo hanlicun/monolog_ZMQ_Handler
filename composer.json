@@ -1,0 +1,11 @@
+{
+    "name": "hanlc/monologzmqhandler",
+    "description": "Monolog Zeromq Handler",
+    "authors": [
+        {
+            "name": "hanlc",
+            "email": "282552154@qq.com"
+        }
+    ],
+    "require": {}
+}
