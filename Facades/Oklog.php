@@ -14,10 +14,6 @@ use Illuminate\Support\Facades\Facade;
 class Oklog extends Facade
 {
 
-	protected static function getFacadeAccessor(){
-		return Logger::class;
-	}
-
 
 	public static function __callstatic($method,$args){
 		return call_user_func_array(array(app("oklog"),$method),$args);
